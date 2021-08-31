@@ -1,0 +1,18 @@
+*{
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+p{
+    background-color: red;  
+    font-weight: bold;
+    font-family: Calibri;
+    font-size: 2em;
+    text-align: center;
+    color: white;
+    border: white;
+    border-style: dashed;
+    border-width: 0.3em;
+    box-shadow: 0.1em 0.1em black;
+}
