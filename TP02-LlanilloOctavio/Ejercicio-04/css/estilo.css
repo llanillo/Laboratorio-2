@@ -5,26 +5,12 @@
 }
 
 h1{
-    background-color: red;  
-    font-weight: bold;
-    font-family: Calibri;
-    font-size: 2em;
+    text-decoration: underline;
+    margin-bottom: 1em;
+}
+
+main, footer {    
     text-align: center;
-    color: white;
-    border: white;
-    border-style: dashed;
-    border-width: 0.3em;
-    box-shadow: 0.1em 0.1em black;
-}
-
-section{
-    display: flex;
-    flex-direction: column;
-}
-
-p{         
-    margin-top: 0.4em;
-    font-size: 1em;    
 }
 
 #negritas{

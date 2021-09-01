@@ -4,16 +4,19 @@
     padding: 0;
 }
 
-table {
-    border: 0.1em solid black;
-    width: 40%;
+h1{
+    text-decoration: underline;
+    margin-bottom: 1em;
 }
 
-th, td {
-    border: 0.1em solid black;
+main, footer {    
     text-align: center;
 }
 
-#sueldo{
-    text-align: right;
+#negritas{
+    font-weight: bold;
+}
+
+#azul{
+    color: blue;
 }
