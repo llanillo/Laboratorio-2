@@ -1,0 +1,10 @@
+# Ignore everything in repository root 
+/*
+
+# Files to not ignore
+!/.gitignore
+
+# Folder to not ignore
+!/TP01-LlanilloOctavio
+!/TP02-LlanilloOctavio/
+!/TP03-LlanilloOctavio/
