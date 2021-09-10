@@ -3,11 +3,11 @@
 ?>
 
 <?php
-    $palabra = "palabra";
+    $palabra = "ana";
     
     echo '<p>Palabra: <p id = "negritas">' . $palabra . '</p>' . '</p>';
     
-    if (esPalindromo($palabra)){
+    if (esPalindromo($palabra) == 0){
         echo '<p id = "negritas">Es un palíndromo</p>';
     }
     else{
@@ -18,14 +18,18 @@
 
 <?php
     function esPalindromo ($palabra){
-        $palabraAlReves;
-        for ($i = 0 ; $i < strlen($palabra) ; $i++){
-            $palabraAlReves[$i] = $palabra[$i];
-        }
+        $tamañoPalabra = strlen($palabra);
+        $palabraAlReves = array_fill(0, $tamañoPalabra, '');;        
+        $aux = 1;
         
-        return strcmp($palabra, $palabraAlReves);
+        for ($i = 0 ; $i < $tamañoPalabra ; $i++){  
+            $palabraAlReves[$tamañoPalabra - ($i + $aux)] = $palabra[$i];
+        }                
+                
+        return strcmp($palabra, implode($palabraAlReves));
     }
 ?>
+
 <?php
     require_once 'html/pie.html';
 ?>

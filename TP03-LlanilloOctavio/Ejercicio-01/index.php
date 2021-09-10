@@ -6,7 +6,8 @@
     <h1>Inserte algún título</h1>
 
     <?php        
-        $numero = mt_rand(0, 1000);                                
+        $numero = mt_rand(0, 1000);  
+//        $numero = 153; PRUEBA
         $suma = esNarcicista($numero);
         
         echo '<p> Número: ' . '<p id = "negritas">' . $numero . '</p>' . '</p>';
