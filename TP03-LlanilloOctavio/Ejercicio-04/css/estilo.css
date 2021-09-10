@@ -1,0 +1,25 @@
+*{
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+h1{
+    text-decoration: underline yellow dotted;
+    margin-bottom: 1em;    
+    font-size: 2em;
+    font-family: Times New Roman;
+}
+
+main, footer {    
+    text-align: center;
+}
+
+section {
+    border-top: yellow dotted 1em;
+    border-bottom: yellow dotted 1em;
+}
+#rojo{
+    font-weight: bold;
+    color: red;
+}
