@@ -1,10 +1,11 @@
 <?php
-    require_once 'html/encabezado.html';
+    require_once 'html/encabezado.html';    
 ?>
 
 <?php
     $palabra = "ana";
     
+    echo '<section>';
     echo '<p>Palabra: <p id = "negritas">' . $palabra . '</p>' . '</p>';
     
     if (esPalindromo($palabra) == 0){
@@ -13,6 +14,7 @@
     else{
         echo '<p id = "negritas">No es un palíndromo</p>';
     }
+    echo '</section>';
 
 ?>
 

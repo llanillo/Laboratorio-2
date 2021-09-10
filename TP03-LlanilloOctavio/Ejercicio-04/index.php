@@ -15,7 +15,7 @@
         $dineroCamionetas = 0;        
         
         for ($i = 0; $i < $cantVehiculos; $i++){
-            $indice = array_rand($tarifas);
+            $indice = array_rand($tarifas);                        
             switch ($indice){
                 case 'motos':
                     $cantMotos++;
@@ -34,21 +34,13 @@
         
         $dineroTotal = $dineroAutos + $dineroMotos + $dineroCamionetas;
         echo '<section>';
-        echo '<p>Cantidad de motos: ' . $cantMotos . '. Recaudación: ' + $dineroMotos . '</p>';
-        echo '<p>Cantidad de autos: ' . $cantMotos . '. Recaudación: ' + $dineroAutos . '</p>';
-        echo '<p>Cantidad de camionetas: ' . $cantMotos . '. Recaudación: ' + $dineroCamionetas . '</p>';
+        echo '<p>Cantidad de motos: ' . $cantMotos . '. Recaudación: ' . $dineroMotos . '</p>';
+        echo '<p>Cantidad de autos: ' . $cantAutos . '. Recaudación: ' . $dineroAutos . '</p>';
+        echo '<p>Cantidad de camionetas: ' . $cantCamionetas . '. Recaudación: ' . $dineroCamionetas . '</p>';
         echo '<p id = "rojo">Total vehículos: ' . $cantVehiculos . '</p>';
         echo '<p id = "rojo">Recaudación del día: ' . $dineroTotal . '</p>';
         echo '</section>';
     ?>
-    
-    <?php
-        function cantVehiculosAleatorios ($maxmimo){
-
-            
-        }
-    ?>
-
 </main>
 
 <?php
