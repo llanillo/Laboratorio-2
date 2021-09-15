@@ -12,10 +12,10 @@
         return $arregloNumeros;
     }
 
-    function cantidadEnArreglo ($valorBuscar, $arreglo = []){
+    function cantidadSemejantesEnArreglos ($arreglo1, $arreglo2){
         $cantidad = 0;
-        foreach ($arreglo as $valor){
-            if ($valor == $valorBuscar)
+        for ($i = 0; $i < count($arreglo2); $i++){
+            if ($arreglo1[$i] == $arreglo2[$i])
                 $cantidad++;
         }
         return $cantidad;

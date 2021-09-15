@@ -4,41 +4,6 @@
     padding: 0;
 }
 
-h2{
-    color: purple;
-    margin: 1em;
-    
-}
-
 main, footer {    
-    text-align: center;
-}
-
-section {
-    display: flex;
-    justify-content: center;
-}
-
-#negritas{
-    font-weight: bold;
-}
-
-#rojo{
-    font-weight: bold;
-    color: red;
-}
-
-caption {
-    font-weight: bold;
-    font-size: 1.5em;
-}
-
-table {
-    border: 0.1em solid purple;
-    width: 40%;
-}
-
-th, td {
-    border: 0.1em solid black;
     text-align: center;
 }

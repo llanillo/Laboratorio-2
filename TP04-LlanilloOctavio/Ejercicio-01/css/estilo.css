@@ -14,3 +14,36 @@ h1{
     font-size: 1.5em;
     color: black;    
 }
+
+fieldset{
+    border: red solid 0.5em;
+}
+
+form, table{
+    background-color: lightskyblue;
+}
+
+table {
+    border: 0.1em solid red;
+    width: 40%;
+}
+
+th{
+    background-color: lightcoral;
+}
+
+th, td {
+    border: 0.1em solid black;
+    text-align: center;
+    color: white;
+}
+
+legend{
+    font-size: 1.2em;
+    color: red;
+}
+
+label, input [type="sumbit"]{
+    display: block;
+    margin-top: 1.5em;
+}

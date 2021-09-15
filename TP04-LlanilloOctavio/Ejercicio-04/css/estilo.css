@@ -5,21 +5,17 @@
 }
 
 h1{
-    text-decoration: underline yellow dotted;
+    text-decoration: none;
     margin-bottom: 1em;    
-    font-size: 2em;
+    font-size: 1.2em;
     font-family: Times New Roman;
+    color: #FF60D9;
 }
 
 main, footer {    
     text-align: center;
 }
 
-section {
-    border-top: yellow dotted 1em;
-    border-bottom: yellow dotted 1em;
-}
-#rojo{
-    font-weight: bold;
-    color: red;
+input[type=text], input[type=password]{
+    border-bottom: #FF60D9 solid 0.2em;
 }
