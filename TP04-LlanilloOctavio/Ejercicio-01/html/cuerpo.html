@@ -1,0 +1,33 @@
+<main>
+    <h1>Inserte algún título</h1>
+
+    <section>
+        <form action="#" method="post">
+            <fieldset>            
+                <legend>Ingrese los datos</legend>
+                <label for="apell">Apellidos:
+                    <input id="apell" type="text" value=" " name="apellidos">
+                </label>
+                <label for="nomb">Nombres:
+                    <input id="nomb" type="text" value=" " name="nombres">
+                </label>
+                <label for="usu">Usuario:
+                    <input id="usu" type="text" value="" minlength="5" name="usuario">
+                </label>
+                <label for="cla">Contraseña:
+                    <input id="cla" type="password" value="" minlength="8" name="clave">
+                </label>
+                <label for="tip">Tipo:
+                    <select id="tip" name="tipo">
+                        <option value="ninguno">--Selecione--</option>
+                        <option value="admin">Administrador</option>
+                        <option value="estudiante">Estudiante</option>
+                        <option value="profesor">Profesor</option>
+                    </select>
+                </label>
+                <input type="submit" value="cargar" name="Cargar">
+                <input type="reset" value="limpiar" name="Limpiar">
+            </fieldset>
+        </form>        
+    </section>             
+</main>
