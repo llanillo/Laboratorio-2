@@ -14,8 +14,8 @@
 
     function cantidadSemejantesEnArreglos ($arreglo1, $arreglo2){
         $cantidad = 0;
-        for ($i = 0; $i < count($arreglo2); $i++){
-            if ($arreglo1[$i] == $arreglo2[$i])
+        for ($i = 0; $i < count($arreglo1); $i++){
+            if (in_array($arreglo1[$i], $arreglo2))
                 $cantidad++;
         }
         return $cantidad;

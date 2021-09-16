@@ -1,26 +1,32 @@
 *{
     border: 0;
     margin: 0;
-    padding: 0;
+    padding: 0;    
 }
 
-main, footer, section {    
-    text-align: center;
+main {
+    background-color: lightskyblue;
 }
 
-h1{
-    font-weight: bold;
-    font-family: Times New Roman;
-    font-size: 1.5em;
-    color: black;    
+footer, section, fieldset{        
+    display: flex;    
+    flex-direction: column;    
+    align-items: center;    
 }
 
 fieldset{
-    border: red solid 0.5em;
+    border: red solid 0.2em;    
+    padding: 1.5em;        
+}
+
+legend{
+    font-size: 1.2em;
+    color: red;
+    padding: 0.5em;
 }
 
 form, table{
-    background-color: lightskyblue;
+    background-color: lightskyblue;    
 }
 
 table {
@@ -36,14 +42,27 @@ th, td {
     border: 0.1em solid black;
     text-align: center;
     color: white;
+    font-weight: bold;    
 }
 
-legend{
-    font-size: 1.2em;
-    color: red;
+td{
+    color: black;
 }
 
-label, input [type="sumbit"]{
+label, input[type=submit]{
     display: block;
-    margin-top: 1.5em;
+    margin: 1em;
+    font-size: 1.3em;
+}
+
+input{
+    font-size: 0.8em;
+}
+
+input[type=text], input[type=password], input[type=submit], #tip{
+    border: 0.1em solid red;
+}
+
+input[type=submit]{    
+    padding: 1em;
 }

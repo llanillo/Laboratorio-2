@@ -1,16 +1,16 @@
-<main>
-    <h1>Inserte algún título</h1>
-
+<main>    
     <section>
-        <form action="php/procesar.php" method="post">                           
-            <label for="usu">Usuario:
-                <input id="usu" type="text" value="" minlength="5" name="usuario" placeholder="Usuario">
-            </label>
-            <label for="cla">Contraseña:
-                <input id="cla" type="password" value="" minlength="8" name="clave" placeholder="Contraseña">
-            </label>
-            <input type="submit" value="cargar" name="Cargar">
-            <input type="reset" value="limpiar" name="Limpiar">
-        </form>        
+        <fieldset>
+            <h1>Inicie Sesión</h1>            
+            <form action="php/procesar.php" method="post">                           
+                <label for="usu">
+                    <input id="usu" type="text" value="" minlength="5" name="usuario" placeholder="Usuario" required>
+                </label>
+                <label for="cla">
+                    <input id="cla" type="password" value="" minlength="8" name="clave" placeholder="Contraseña" required>
+                </label>
+                <input type="submit" value="Iniciar sesión" name="Cargar">                
+            </form>   
+    </fieldset>     
     </section>             
 </main>

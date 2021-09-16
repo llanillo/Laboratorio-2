@@ -8,26 +8,37 @@ main, footer{
     text-align: center;
 }
 
-section{
+section, article{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;    
 }
 
-h1{
-    font-weight: bold;
-    font-family: Times New Roman;
-    font-size: 1.5em;
-    color: white;    
+div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 1em;
+}
+
+p, td{
+    font-size: 1.1em;;
+}
+
+.sorteo{
+    font-size: 1.7em;
+}
+
+.imgParticipante {
+    width: 40%;    
+}
+
+.imgSorteo{
+    width: 100%;
 }
 
 #azul{
     font-weight: bold;
     color: blue;
-    font-size: 1.2em;
-}
-
-#negritas{
-    font-size: 1.5em;
-    font-weight: bold;
+    font-size: 1.3em;
 }

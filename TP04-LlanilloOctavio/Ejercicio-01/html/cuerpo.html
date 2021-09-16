@@ -1,15 +1,13 @@
-<main>
-    <h1>Inserte algún título</h1>
-
+<main>    
     <section>
         <form action="php/procesar.php" method="post">
             <fieldset>            
                 <legend>Ingrese los datos</legend>
                 <label for="apell">Apellidos:
-                    <input id="apell" type="text" value=" " name="apellidos" placeholder="Escriba el apellido">
+                    <input id="apell" type="text" value="" name="apellidos" placeholder="Escriba el apellido">
                 </label>
                 <label for="nomb">Nombres:
-                    <input id="nomb" type="text" value=" " name="nombres" placeholder="Escriba el nombre">
+                    <input id="nomb" type="text" value="" name="nombres" placeholder="Escriba el nombre">
                 </label>
                 <label for="usu">Usuario:
                     <input id="usu" type="text" value="" minlength="5" name="usuario" placeholder="Escriba el nombre de usuario">
@@ -25,8 +23,7 @@
                         <option value="profesor">Profesor</option>
                     </select>
                 </label>
-                <input type="submit" value="cargar" name="Cargar">
-                <input type="reset" value="limpiar" name="Limpiar">
+                <input type="submit" value="Cargar" name="Cargar">                
             </fieldset>
         </form>        
     </section>             

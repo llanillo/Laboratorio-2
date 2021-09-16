@@ -4,7 +4,7 @@
 
 <main>
     <?php
-        require_once('php/funciones.php');
+        require_once 'php/funciones.php';
         $participante1 = aleatorioSinRepetir(6, 1, 45);
         $participante2 = aleatorioSinRepetir(6, 1, 45);
         $participante3 = aleatorioSinRepetir(6, 1, 45);
@@ -21,7 +21,7 @@
         <article>
             <table>
                 <tbody>
-                    <tr><td><figure><img src="img/usuario.png" alt="Usuario"></figure></td></tr>                                
+                    <tr><td><figure><img class="imgParticipante" src="img/usuario.png" alt="Usuario"></figure></td></tr>                                
                     <tr><td>Participante 1</td></tr>
                     <tr>
                         <td id="azul">
@@ -36,7 +36,7 @@
             </table>
             <table>
                 <tbody>
-                    <tr><td><figure><img src="img/usuario.png" alt="Usuario"></figure></td></tr>                                
+                    <tr><td><figure><img class="imgParticipante" src="img/usuario.png" alt="Usuario"></figure></td></tr>                                
                     <tr><td>Participante 2</td></tr>
                     <tr>
                         <td id="azul">
@@ -51,7 +51,7 @@
             </table>
                     <table>
                 <tbody>
-                    <tr><td><figure><img src="img/usuario.png" alt="Usuario"></figure></td></tr>                                
+                    <tr><td><figure><img class="imgParticipante" src="img/usuario.png" alt="Usuario"></figure></td></tr>                                
                     <tr><td>Participante 3</td></tr>
                     <tr>
                         <td id="azul">
@@ -66,7 +66,7 @@
             </table>
             <table>
                 <tbody>
-                    <tr><td><figure><img src="img/usuario.png" alt="Usuario"></figure></td></tr>                                
+                    <tr><td><figure><img class="imgParticipante" src="img/usuario.png" alt="Usuario"></figure></td></tr>                                
                     <tr><td>Participante 4</td></tr>
                     <tr>
                         <td id="azul">
@@ -80,31 +80,33 @@
                 </tbody>
             </table>     
         </article>
+    </section>
 
-        <article>
+    <article>
             <table>
                 <tbody>
-                    <tr><td><figure><img src="img/Quini-6.png" alt="Usuario"></figure></td></tr>
+                    <tr><td><figure><img class="imgSorteo" src="img/Quini-6.png" alt="Usuario"></figure></td></tr>
                     <tr>
-                        <td id="negritas">
+                        <td class="sorteo"><strong>
                         <?php  
                             foreach($sorteo as $value){
                                 echo $value . ' ';
                             }
                         ?>
-                        </td>
+                        </strong></td>
                     </tr>
                 </tbody>
             </table>
         </article>
-    </section>
 
+    <div>
     <?php
         echo '<p>Participante 1: <strong>' . $aciertos1 . '</strong></p>';
         echo '<p>Participante 2: <strong>' . $aciertos2 . '</strong></p>';
         echo '<p>Participante 3: <strong>' . $aciertos3 . '</strong></p>';
         echo '<p>Participante 4: <strong>' . $aciertos4 . '</strong></p>';
     ?>
+    </div>
 </main>
 
 <?php
