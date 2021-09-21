@@ -8,37 +8,40 @@ main, footer{
     text-align: center;
 }
 
-section, article{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;    
+table{
+    border: 0.5em solid orange;
 }
 
-div{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+td, th{
+    padding: 1em;
     margin: 1em;
+    text-align: center;
 }
 
-p, td{
-    font-size: 1.1em;;
+tr {
+    border-bottom: 0.3em solid orange;
+    font-size: 1.1em;
 }
 
-.sorteo{
-    font-size: 1.7em;
-}
-
-.imgParticipante {
-    width: 40%;    
-}
-
-.imgSorteo{
-    width: 100%;
-}
-
-#azul{
+th{
+    text-align: center;    
+    color: black;
     font-weight: bold;
-    color: blue;
-    font-size: 1.3em;
+    font-size: 1.2em;
+}
+
+.titulo{
+    background-color: orange;
+    color:white;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.link{
+    color: purple;
+    text-decoration: underline;
+}
+
+.rojo{
+    color: red;
 }

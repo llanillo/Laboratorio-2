@@ -1,114 +1,48 @@
 <?php
+    $ruta = 'css';
     require_once 'html/encabezado.html';    
 ?>
 
+<?php
+    define('RUTA_CARPETA', '../txt/');
+    define ('NOMBRE_ARCHIVO', 'cursos.txt');
+    define ('RUTA_ARCHIVO', RUTA_CARPETA . '/' . NOMBRE_ARCHIVO);
+?>
+
 <main>
-    <?php
-        require_once 'php/funciones.php';
-        $participante1 = aleatorioSinRepetir(6, 1, 45);
-        $participante2 = aleatorioSinRepetir(6, 1, 45);
-        $participante3 = aleatorioSinRepetir(6, 1, 45);
-        $participante4 = aleatorioSinRepetir(6, 1, 45);        
-        $sorteo = aleatorioSinRepetir(6, 1, 45);
-        
-        $aciertos1 = cantidadSemejantesEnArreglos($participante1, $sorteo);
-        $aciertos2 = cantidadSemejantesEnArreglos($participante2, $sorteo);
-        $aciertos3 = cantidadSemejantesEnArreglos($participante3, $sorteo);
-        $aciertos4 = cantidadSemejantesEnArreglos($participante4, $sorteo);
-    ?>
-        
-    <section>
-        <article>
-            <table>
-                <tbody>
-                    <tr><td><figure><img class="imgParticipante" src="img/usuario.png" alt="Usuario"></figure></td></tr>                                
-                    <tr><td>Participante 1</td></tr>
-                    <tr>
-                        <td id="azul">
-                        <?php  
-                            foreach($participante1 as $value){
-                                echo $value . ' ';
-                            }
-                        ?>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-            <table>
-                <tbody>
-                    <tr><td><figure><img class="imgParticipante" src="img/usuario.png" alt="Usuario"></figure></td></tr>                                
-                    <tr><td>Participante 2</td></tr>
-                    <tr>
-                        <td id="azul">
-                        <?php  
-                            foreach($participante2 as $value){
-                                echo $value . ' ';
-                            }
-                        ?>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-                    <table>
-                <tbody>
-                    <tr><td><figure><img class="imgParticipante" src="img/usuario.png" alt="Usuario"></figure></td></tr>                                
-                    <tr><td>Participante 3</td></tr>
-                    <tr>
-                        <td id="azul">
-                        <?php  
-                            foreach($participante3 as $value){
-                                echo $value . ' ';
-                            }
-                        ?>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-            <table>
-                <tbody>
-                    <tr><td><figure><img class="imgParticipante" src="img/usuario.png" alt="Usuario"></figure></td></tr>                                
-                    <tr><td>Participante 4</td></tr>
-                    <tr>
-                        <td id="azul">
-                        <?php  
-                            foreach($participante4 as $value){
-                                echo $value . ' ';
-                            }
-                        ?>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>     
-        </article>
-    </section>
-
-    <article>
-            <table>
-                <tbody>
-                    <tr><td><figure><img class="imgSorteo" src="img/Quini-6.png" alt="Usuario"></figure></td></tr>
-                    <tr>
-                        <td class="sorteo"><strong>
-                        <?php  
-                            foreach($sorteo as $value){
-                                echo $value . ' ';
-                            }
-                        ?>
-                        </strong></td>
-                    </tr>
-                </tbody>
-            </table>
-        </article>
-
-    <div>
-    <?php
-        echo '<p>Participante 1: <strong>' . $aciertos1 . '</strong></p>';
-        echo '<p>Participante 2: <strong>' . $aciertos2 . '</strong></p>';
-        echo '<p>Participante 3: <strong>' . $aciertos3 . '</strong></p>';
-        echo '<p>Participante 4: <strong>' . $aciertos4 . '</strong></p>';
-    ?>
-    </div>
+    <table>
+        <thead>
+            <tr><th class="titulo" colspan="5">Listado de cursos disponibles</th></tr>
+            <tr>
+                <th>Logo</th>
+                <th>Curso</th>
+                <th>Disertante</th>
+                <th>Fecha de inicio</th>
+                <th>Inscripción</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php 
+                $archivo = fopen(RUTA_ARCHIVO, 'r');
+                while (!feof($archivo)){
+                    $linea = fgets($archivo);
+                    if ($linea != ''){
+                        $linea_separada = explode(';', $linea);
+                        echo '<tr>';
+                        echo '<td><figure><img class="img" src="' . $linea_separada[4] . '></figure></td></tr>';
+                        echo '<td>' . $linea_separada[0] . '</td>';
+                        echo '<td>' . $linea_separada[1] . '</td>';
+                        echo '<td>' . $linea_separada[2] . '</td>';
+                        $disponibilidad = $linea_separada[3];
+                        if ($disponibilidad == 'Sin Cupos') echo '<td class="rojo">' . $disponibilidad . '</td>';
+                        else echo '<td class="link"> Inscribirse </td>';
+                        echo '</tr>';
+                    }
+                }
+            ?>
+        </tbody>
+    </table>
 </main>
-
 <?php
     require_once 'html/pie.html';
 ?>
