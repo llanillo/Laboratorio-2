@@ -29,7 +29,7 @@
                     if ($linea != ''){
                         $linea_separada = explode(';', $linea);
                         echo '<tr>';
-                        echo '<td><figure><img class="img" src="' . $linea_separada[4] . '></figure></td></tr>';
+                        echo '<td><figure><img class="img" src="' . 'img/' . $linea_separada[4] . '></figure></td></tr>';
                         echo '<td>' . $linea_separada[0] . '</td>';
                         echo '<td>' . $linea_separada[1] . '</td>';
                         echo '<td>' . $linea_separada[2] . '</td>';
