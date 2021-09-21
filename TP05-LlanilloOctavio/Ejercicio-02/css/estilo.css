@@ -1,0 +1,44 @@
+*{
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+main, footer{    
+    text-align: center;
+}
+
+section, article{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;    
+}
+
+div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 1em;
+}
+
+p, td{
+    font-size: 1.1em;;
+}
+
+.sorteo{
+    font-size: 1.7em;
+}
+
+.imgParticipante {
+    width: 40%;    
+}
+
+.imgSorteo{
+    width: 100%;
+}
+
+#azul{
+    font-weight: bold;
+    color: blue;
+    font-size: 1.3em;
+}

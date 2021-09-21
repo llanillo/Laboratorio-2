@@ -1,0 +1,61 @@
+*{
+    border: 0;
+    margin: 0;
+    padding: 0;    
+}
+
+h1{
+    border-bottom: 0.05em solid black;
+    margin-bottom: 1em; 
+    padding-bottom: 0.3em;   ;
+    font-size: 2.5em;
+}
+
+h2{
+    font-size: 1.5em;
+    color: yellow;
+}
+
+form, section{        
+    display: flex;    
+    flex-direction: column;    
+    align-items: center;    
+}
+
+main, footer {    
+    text-align: center;
+}
+
+section {
+    background-color: plum;
+}
+
+p{
+    font-size: 1.3em;
+    margin: 1em;
+    font-family: Arial;
+}
+
+label, input[type=submit]{
+    display: block;
+    margin: 1em;
+    font-size: 1.3em;
+}
+
+input{
+    font-size: 0.8em;
+}
+
+input[type=text], input[type=password], input[type=submit], #tip{
+    border: 0.1em solid;
+}
+
+input[type=submit]{    
+    padding: 1em;
+}
+
+.blanco{
+    color: white;
+    font-weight: bold;
+    font-size: 1.3em;
+}
