@@ -25,8 +25,8 @@
             }            
         }
 
-        if (!$inicioSesion) header('refresh:3;url=../index.php');
-        else require_once '../html/inicio.html';        
+        if ($inicioSesion) require_once '../html/principal.html';        
+        else header('refresh:3;url=../index.php');
     }
 ?>
 
