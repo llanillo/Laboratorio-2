@@ -8,13 +8,17 @@ main, footer{
     text-align: center;
 }
 
+img {
+    width: 15%;  
+}
+
 table{
     border: 0.5em solid orange;
 }
 
 td, th{
-    padding: 1em;
-    margin: 1em;
+    padding: 0.5em;
+    margin: 0.5em;
     text-align: center;
 }
 

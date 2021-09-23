@@ -1,1 +1,5 @@
 pedro;11
+pedro;10
+pedro234;4.5
+pedro223;11
+pablo;13

@@ -60,6 +60,6 @@
 </main>
 
 <?php
-    require_once 'html/pie.html';
+    require_once '../html/pie.html';
 ?>
 

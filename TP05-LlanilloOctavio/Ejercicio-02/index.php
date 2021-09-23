@@ -4,7 +4,7 @@
 ?>
 
 <?php
-    define('RUTA_CARPETA', '../txt/');
+    define('RUTA_CARPETA', 'txt/');
     define ('NOMBRE_ARCHIVO', 'cursos.txt');
     define ('RUTA_ARCHIVO', RUTA_CARPETA . '/' . NOMBRE_ARCHIVO);
 ?>
@@ -26,10 +26,10 @@
                 $archivo = fopen(RUTA_ARCHIVO, 'r');
                 while (!feof($archivo)){
                     $linea = fgets($archivo);
-                    if ($linea != ''){
-                        $linea_separada = explode(';', $linea);
+                    if ($linea != ''){                        
+                        $linea_separada = explode(';', $linea);                        
                         echo '<tr>';
-                        echo '<td><figure><img class="img" src="' . 'img/' . $linea_separada[4] . '></figure></td></tr>';
+                        echo '<td><figure><img class="img" src="' . 'img/' . $linea_separada[4] . '"></figure></td>';
                         echo '<td>' . $linea_separada[0] . '</td>';
                         echo '<td>' . $linea_separada[1] . '</td>';
                         echo '<td>' . $linea_separada[2] . '</td>';
