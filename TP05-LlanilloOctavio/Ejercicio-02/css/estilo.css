@@ -9,11 +9,12 @@ main, footer{
 }
 
 img {
-    width: 15%;  
+    width: 15%;      
 }
 
 table{
     border: 0.5em solid orange;
+    border-collapse: collapse;    
 }
 
 td, th{
