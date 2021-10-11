@@ -6,6 +6,7 @@
     <h1>CRIPTOMONEDAS</h1>        
     
     <?php
+        $criptoElegida = 'SOL';
         $dinero = mt_rand(10000, 50000);
         const COTIZACION_DOGE = 25.95;
         const COTIZACION_BITCOIN = 4528602.88;
@@ -25,14 +26,32 @@
         $cantUsdt = number_format($dinero/COTIZACION_USDT, 8, ',', '.');
         echo '<h2>Efectivo: ' . '<p id = "negritas">$ ' . $dinero . '</p>' . '</h2>';
         echo '<p>Puedes comprar: </p>';
-        echo '<p id = "azul">' . $cantDoge . '</p>';
-        echo '<p id = "azul">' . $cantBitcoin . '</p>';
-        echo '<p id = "azul">' . $cantEth . '</p>';
-        echo '<p id = "azul">' . $cantAda . '</p>';
-        echo '<p id = "azul">' . $cantDot . '</p>';
-        echo '<p id = "azul">' . $cantSol . '</p>';
-        echo '<p id = "azul">' . $cantFil . '</p>';
-        echo '<p id = "azul">' . $cantUsdt . '</p>';
+        switch ($criptoElegida){
+            case 'DOT':
+                echo '<p id = "azul">' . $cantDot . '<strong> Polkadot coins</strong>'. '</p>';
+                break;
+            case 'DOGE':
+                echo '<p id = "azul">' . $cantDoge .  '<strong> Doge coins</strong>'. '</p>';
+                break;
+            case 'BTC':
+                echo '<p id = "azul">' . $cantBitcoin . '<strong> Bitcoin coins</strong>'. '</p>';
+                break;
+            case 'ETH':
+                echo '<p id = "azul">' . $cantEth . '<strong> Ethereum coins</strong>'. '</p>';
+                break;
+            case 'ADA':
+                echo '<p id = "azul">' . $cantAda . '<strong> Cardano coins</strong>'. '</p>';
+                break;
+            case 'SOL':
+                echo '<p id = "azul">' . $cantSol . '<strong> Solanium coins</strong>'. '</p>';
+                break;
+            case 'FIL':
+                echo '<p id = "azul">' . $cantFil . '<strong> File coins</strong>'. '</p>';
+                break;
+            case 'USDT':
+                echo '<p id = "azul">' . $cantUsdt . '<strong> Tether coins</strong>'. '</p>';
+                break;
+        }
     ?>
 </main>
 

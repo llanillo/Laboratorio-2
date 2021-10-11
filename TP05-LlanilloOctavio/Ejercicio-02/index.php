@@ -39,6 +39,7 @@
                         echo '</tr>';
                     }
                 }
+                fclose($archivo);
             ?>
         </tbody>
     </table>

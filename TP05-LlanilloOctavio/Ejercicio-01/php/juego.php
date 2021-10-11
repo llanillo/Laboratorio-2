@@ -51,6 +51,7 @@
                 $puntaje_mayor = $linea_separada;
         }        
     }    
+    fclose($archivo);
 ?>
     <section>
         <h2>Mejor puntaje</h2>

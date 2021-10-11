@@ -54,18 +54,20 @@ input[type=submit]{
 }
 
 ul{
+    list-style-type: none;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: column;    
     align-items: center;
     background-color: lightblue;
-    border: blue 0.2em solid;
+    border: blue 0.1em solid;
 }
 
-li{
-    padding: 2em;
+li{    
+    width: 8%;    
+    text-align: center;
+    padding: 0.8em;
+    margin: 1em;
     background-color: red;
     color: white;
-    font-size: 1.3em;
-    font-weight: bold;
+    font-size: 1.2em;    
 }

@@ -1,12 +1,12 @@
 <?php
     require_once 'html/encabezado.html';
+    include_once 'php/funciones.php';
 ?>
 
 <main>
-    <?php
-        $tipoCarta = ['pica', 'trebol', 'corazon', 'diamante'];
+    <?php        
         $numero = mt_rand(1, 13);
-        $valorAleatorio = $tipoCarta[array_rand($tipoCarta)];
+        $valorAleatorio = seleccionarCarta();
         
         echo '<p><strong>Naipe Barajado: </strong></p>';        
     ?>

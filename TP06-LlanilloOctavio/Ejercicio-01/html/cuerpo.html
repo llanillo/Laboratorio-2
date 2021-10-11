@@ -1,0 +1,36 @@
+<main>    
+    <section>
+        <form action="php/procesar.php" method="post" enctype="multipart/form-data">
+            <fieldset>            
+                <legend>Ingrese los datos</legend>
+                <label for="apell">Apellidos:
+                    <input id="apell" type="text" value="" name="apellidos" placeholder="Escriba el apellido">
+                </label>
+                <label for="nomb">Nombres:
+                    <input id="nomb" type="text" value="" name="nombres" placeholder="Escriba el nombre">
+                </label>
+                <label for="fecha">Fecha de nacimiento:
+                    <input id="fecha" type="date" value="" name="fecha" required>
+                </label>
+                <label for="usu">Usuario:
+                    <input id="usu" type="text" value="" minlength="5" name="usuario" placeholder="Escriba el nombre de usuario">
+                </label>
+                <label for="cla">Contraseña:
+                    <input id="cla" type="password" value="" minlength="8" name="clave" placeholder="Ingrese algo pues...">
+                </label>
+                <label for="tip">Tipo:
+                    <select id="tip" name="tipo">
+                        <option value="ninguno">--Selecione--</option>
+                        <option value="admin">Administrador</option>
+                        <option value="estudiante">Estudiante</option>
+                        <option value="profesor">Profesor</option>
+                    </select>
+                </label>
+                <label for="archivo">Foto:
+                    <input id="archivo" type="file" accept="image/*" name="archivo" required>
+                </label>
+                <input type="submit" value="Cargar" name="Cargar">                
+            </fieldset>
+        </form>        
+    </section>             
+</main>

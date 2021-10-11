@@ -11,22 +11,20 @@
     $clave = $_POST['clave'];
 
     if (!empty($usuario) && !empty($clave)){
-        echo '<p><strong>Usuario: ' . $usuario . '</strong></p>';
-        echo '<p><strong>Usuario: ' . $clave . '</strong></p>';
-
         $archivo = fopen(RUTA_ARCHIVO, 'r');
         $inicioSesion = false;
-
         while(!feof($archivo)){
             $linea = fgets($archivo);
             if($linea != ''){
-                $linea_separada = explode(';', $linea);
-                if ($linea_separada[0] == $linea_separada[1]) $inicioSesion = true;
+                $linea_separada = explode(';', $linea);                
+                if (($linea_separada[0] == $usuario) && ($linea_separada[1] == $clave)) $inicioSesion = true;                
             }            
-        }
-
-        if ($inicioSesion) require_once '../html/principal.html';        
-        else header('refresh:3;url=../index.php');
+        }        
+        if ($inicioSesion) require_once '../html/principal.html';                          
+        else{
+            echo '<p>Datos incorrectos</p>';
+            header('refresh:5;url=../index.php');
+        }            
     }
 ?>
 
