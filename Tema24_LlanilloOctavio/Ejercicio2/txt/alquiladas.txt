@@ -1,0 +1,4 @@
+cama doble;1500;05-10-2021
+cama simple;950;12-10-2021
+2 cuchetas para 2;1800;12-11-2021
+cama doble y 1 simple;2500;19-11-2021

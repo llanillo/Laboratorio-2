@@ -36,8 +36,7 @@ p{
     font-family: Arial;
 }
 
-label, input[type=submit]{
-    display: block;
+label, input[type=submit]{    
     margin: 1em;
     font-size: 1.3em;
 }

@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+@media all and (min-width:700px) {
+
+    h1{
+        font-size: 2.5em;
+        margin: 1em;
+    }
+    
+    h2{
+        font-size: 1.8em;
+        margin: 1em;
+    }
+    
+    p{
+        font-size: 1.3em;
+    }
+
+    header, footer {
+        background-color:lightblue;
+        text-align: center;
+        color: navy;
+    }
+
+    header, footer {
+        padding: 1em;
+    }
+
+    footer a {
+        text-decoration: none;
+        color: navy;
+        font-size: 1.5em;
+    }
+
+    footer a:hover, footer a:focus {
+        background-color: navy;
+        color: powderblue;
+    }
+
+    main, footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
