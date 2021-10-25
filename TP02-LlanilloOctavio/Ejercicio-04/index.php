@@ -6,7 +6,7 @@
     <h1>Registro Automor de la Provincia de Tucumán</h1>        
     <h2>Patente generada: </h2>
     <?php
-        const PATENTE = AE;
+        const PATENTE = 'AE';
         $primeraLetra = asignarLetra();
         $segundaLetra = asignarLetra();
         $valorPatente = sprintf("%03s", mt_rand(1, 999));

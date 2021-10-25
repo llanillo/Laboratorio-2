@@ -6,11 +6,11 @@
     define('RUTA_CARPETA', '../txt/');
     define ('NOMBRE_ARCHIVO', 'usuarios.txt');
     define ('RUTA_ARCHIVO', RUTA_CARPETA . '/' . NOMBRE_ARCHIVO);
-
-    $usuario = $_POST['usuario'];
-    $clave = $_POST['clave'];
-
-    if (!empty($usuario) && !empty($clave)){
+    
+    if (!empty($_POST)){
+        $usuario = $_POST['usuario'];
+        $clave = $_POST['clave'];
+        
         $archivo = fopen(RUTA_ARCHIVO, 'r');
         $inicioSesion = false;
         while(!feof($archivo)){

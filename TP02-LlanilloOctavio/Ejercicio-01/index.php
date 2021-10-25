@@ -7,9 +7,9 @@
 
     <?php        
         $carta1 = mt_rand(0, 12);
-        $carta2 = mt_rad(0, 12);
-        $mensaje1 = asignarMensaje($carta1, $mensaje1);
-        $mensaje2 = asignarMensaje($carta2, $mensaje2);      
+        $carta2 = mt_rand(0, 12);
+        asignarMensaje($carta1, $mensaje1);
+        asignarMensaje($carta2, $mensaje2);      
         $puntuacion = valorCarta($mensaje1) + valorCarta($mensaje2);
         
         echo '<p> Naipe 1: ' . '<p id = "negritas">' . $mensaje1 . '</p>' . '</p>';
@@ -24,8 +24,7 @@
     ?>    
     
     <?php        
-        function valorCarta($carta){
-            $valor;
+        function valorCarta($carta){            
             if ($carta == "Sota" || $carta == "Caballo" || $carta == "Rey"){                            
                 $valor = 0.5;
             }
@@ -49,7 +48,7 @@
                     $mensaje = "Rey";
                     break;
                 default:
-                    $mensaje = $carta1;
+                    $mensaje = $carta;
            }
         }
     ?>

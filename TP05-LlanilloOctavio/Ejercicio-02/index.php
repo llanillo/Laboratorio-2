@@ -11,8 +11,8 @@
 
 <main>
     <table>
-        <thead>
-            <tr><th class="titulo" colspan="5">Listado de cursos disponibles</th></tr>
+        <caption>Listado de cursos disponibles</caption>
+        <thead>            
             <tr>
                 <th>Logo</th>
                 <th>Curso</th>
@@ -44,6 +44,7 @@
         </tbody>
     </table>
 </main>
+
 <?php
     require_once 'html/pie.html';
 ?>

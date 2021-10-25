@@ -3,8 +3,8 @@
     $img = '../img';
     require_once '../html/encabezado.html';    
 
-    define ('NOMBRE_ARCHIVO', 'alumnos.txt');
-    define ('RUTA_ARCHIVO', '../txt/' . NOMBRE_ARCHIVO);
+    const NOMBRE_ARCHIVO = 'alumnos.txt';
+    const RUTA_ARCHIVO = '../txt/' . NOMBRE_ARCHIVO;
     
     if (!empty($_POST['dni'])){
         $archivo = fopen(RUTA_ARCHIVO, 'r');

@@ -38,7 +38,7 @@ table {
     width: 40%;
 }
 
-th, td {
+td {
     border: 0.1em solid black;
     text-align: center;
 }
