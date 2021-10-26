@@ -1,0 +1,127 @@
+*{
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+h1{
+    text-decoration: none;
+    margin: 1em 1em 2em 0;   
+    text-align: left;
+    font-size: 1.4em;
+    font-family: Times New Roman;
+    color: #FF60D9;
+}
+
+h2, caption{
+    font-size: 1.3em;
+    font-family: 'Times New Roman', Times, serif;
+    margin: 1em;
+    font-weight: bold;
+    text-align: center;
+}
+
+main, main article, footer, fieldset{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;       
+    
+}
+
+main, section {
+    background-color: lightblue;
+}
+
+main, footer{
+    margin: 2em;        
+}
+
+main{
+    flex-grow: 1;
+}
+
+section, figure{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+button {
+    margin: 1em;
+    background-color: white;
+    color: red;    
+    border: red solid 0.2em; 
+}
+
+fieldset{
+    border: red solid 0.2em;    
+    padding: 1.5em;     
+    background-color: white;   
+    border-radius: 1em;
+    box-shadow: 0.5em 0.5em gray;
+}
+
+input{
+    border-bottom: #FF60D9 solid 0.2em;
+}
+
+label, input{
+    margin-bottom: 1.5em;
+    font-size: 1em;
+}
+
+input[type=submit]{    
+    border: #FF60D9 solid 0.2em;    
+    color:#FF60D9;
+    font-weight: bold;
+    padding: 1em;    
+    background-color: white;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li, th{
+    color: white;
+    background-color: lightcoral;
+    font-size: 1.3em;    
+    margin: 0.5em;             
+}
+
+a{
+    color: white;
+    text-decoration: none;    
+}
+
+li, th, td{
+    padding: 0.5em;
+    text-align: center;
+}
+
+table{
+    border-collapse: collapse;
+    border: 0.2em solid black;
+    width: 80%;
+}
+
+.tpelicula{
+    background-color: lightpink;
+    margin: 0.5em;
+    border-collapse: collapse;
+}
+
+aside{
+    width: 30%;
+    margin: 1em;
+}
+
+img{
+    width: 1em;
+}
+
+.logo{
+    width: 2em;
+}
