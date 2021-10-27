@@ -8,6 +8,6 @@
         <h2>Películas</h2>
         <ul>
             <li><a href="pelicula_alta.php">Agregar película</a></li>
-            <li><a href="">Listar películas</a></li>
+            <li><a href="pelicula_listado.php">Listado películas</a></li>
         </ul>
 </aside>

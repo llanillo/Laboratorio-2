@@ -21,6 +21,11 @@ h2, caption{
     text-align: center;
 }
 
+h3{
+    margin: 0.5em 0 0 0;
+    text-align: left;
+}
+
 main, main article, footer, fieldset{
     display: flex;
     flex-direction: column;
@@ -41,15 +46,25 @@ main{
     flex-grow: 1;
 }
 
-section, figure{
+section, figure, .botones {
     display: flex;
     flex-direction: row;
+}
+
+section, figure{
+    align-items: flex-start;    
+    justify-content: center;    
+}
+
+.botones {
+    background-color: transparent;
     align-items: center;
     justify-content: center;
 }
 
 button {
     margin: 1em;
+    padding: 1em;
     background-color: white;
     color: red;    
     border: red solid 0.2em; 
@@ -72,11 +87,12 @@ label, input{
     font-size: 1em;
 }
 
-input[type=submit]{    
+input[type=submit], input[type="button"]{    
     border: #FF60D9 solid 0.2em;    
     color:#FF60D9;
     font-weight: bold;
     padding: 1em;    
+    margin: 1em;
     background-color: white;
 }
 
@@ -101,6 +117,11 @@ li, th, td{
     text-align: center;
 }
 
+.datapeli{
+    text-align: left;
+    float: left
+}
+
 table{
     border-collapse: collapse;
     border: 0.2em solid black;
@@ -108,9 +129,11 @@ table{
 }
 
 .tpelicula{
+    border: 0.1em solid black;
     background-color: lightpink;
-    margin: 0.5em;
+    margin: 0.5em;    
     border-collapse: collapse;
+    width: 100%;
 }
 
 aside{
@@ -119,9 +142,10 @@ aside{
 }
 
 img{
-    width: 1em;
+    width: 1.5em;
+    margin: 0 1em 0 0;
 }
 
 .logo{
-    width: 2em;
+    width: 9em;
 }

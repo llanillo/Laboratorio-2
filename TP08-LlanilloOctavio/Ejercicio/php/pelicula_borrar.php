@@ -19,7 +19,7 @@
             if ($resultado){                
                 $fila = mysqli_fetch_array($resultado);                
                 echo '<h2>Eliminar película</h2>';
-                echo '¿Está seguro de querer eliminar la película ' . $fila['titulo'] . '</p>';   
+                echo '¿Está seguro de querer eliminar la película ' . $fila['titulo'] . '?</p>';   
                 echo '<section>';
                 echo '<a href="pelicula_borrar_aceptar.php?id='. $id . '"><button>Aceptar</button></a>';
                 echo '<a href="pelicula_listado.php"><button>Cancelar</button></a>';

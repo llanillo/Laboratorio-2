@@ -11,7 +11,7 @@
         
         $conexion = conectar();
         $id = $_GET['id'];
-        $consulta = 'DELETE FROM pelicula WHERE id= "' . $id . '\'' ;
+        $consulta = 'DELETE FROM pelicula WHERE id=' . $id ;
         $resultado = mysqli_query($conexion, $consulta);
         desconectar($conexion);
     ?>
@@ -21,7 +21,7 @@
             if ($resultado)
                 echo '<h2>Se borró la película exitosamente</h2>';                
             else echo '<h2>Error al borrar</h2>';
-            header('refresh:3; url=pelicula_listado.php');
+            header('refresh:2; url=pelicula_listado.php');
         ?>
     </main>
 </section>

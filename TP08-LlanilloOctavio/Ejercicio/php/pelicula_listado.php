@@ -10,8 +10,9 @@
         require_once 'conexion.php';
         
         $conexion = conectar();
-        $consulta = 'SELECT FROM * pelicula';
-        $resultado = mysqli_query($conexion, $consulta);
+        $consulta = 'SELECT * FROM pelicula';
+        $resultado = mysqli_query($conexion, $consulta);        
+        desconectar($conexion);
     ?>
     <main>
         <?php         
@@ -26,9 +27,9 @@
                         echo '<td rowspan="4">';
                         echo '<figure>';             
                         if (!empty($fila['foto_portada']))
-                            echo '<img class="logo" src="img/portadas/' . $fila['foto_portada'] . 'alt="foto portada">';
+                            echo '<img class="logo" src="../img/portadas/' . $fila['foto_portada'] . '" alt="foto portada">';
                         else
-                            echo '<img class="logo" src="img/sin_imagen.png>';
+                            echo '<img class="logo" src="../img/sin_imagen.png" alt="foto portada">';
                         echo '</figure>';
                         echo '</td>';
                         echo '<td>';
@@ -37,48 +38,31 @@
                         echo '</tr>';
 
                         echo '<tr><td>';
-                        echo '<p>Género: ' . $fila['genero'] . '</p>';
+                        echo '<p class="datapeli">Género: ' . $fila['genero'] . '</p>';
                         echo '</td></tr>';
 
                         echo '<tr><td>';
-                        echo '<p>Fecha de estreno: ' . $fila['fecha_estreno'] . '</p>';
+                        echo '<p class="datapeli">Fecha de estreno: ' . $fila['fecha_estreno'] . '</p>';
                         echo '</td></tr>';
 
                         echo '<tr><td>';
-                        echo '<p>Duración: ' . $fila['duracion'] . '</p>';
+                        echo '<p class="datapeli">Duración: ' . $fila['duracion'] . '</p>';
                         echo '</td></tr>';
 
-                        echo '<tr><td>';
-                        echo '<figure>';
-                        echo '<a href="pelicula_modificar.php?id='. $fila['id'] .'"><img src="../img/edit_pencil.png></a>';
-                        echo '<a href="pelicula_borrar.php?id=' . $fila['id'] . '"><img src="../img/trash_empty.png></a>';                    
+                        echo '<tr><td></td><td>';
+                        echo '<figure class="datapeli">';
+                        echo '<a href="pelicula_modificar.php?id='. $fila['id'] .'"><img src="../img/edit_pencil.png"></a>';
+                        echo '<a href="pelicula_borrar.php?id=' . $fila['id'] . '"><img src="../img/trash_empty.png"></a>';                    
                         echo '</figure>';
                         echo '</td></tr>';
                                                                                                 
                         echo '</tbody>';
                         echo '</table>';
-
-             
-                        if (!empty($fila['foto_portada']))
-                            echo '<img class="logo" align="left" src="img/portadas/' . $fila['foto_portada'] . 'alt="foto portada">';
-                        else
-                            echo '<img class="logo" src="img/sin_imagen.png>';
-                        echo '</figure>';
-
-                        echo '<h3>' . $fila['titulo'] . '</h3>';    
-                        echo '<p>Género: ' . $fila['genero'] . '</p>';
-                        echo '<p>Fecha de estreno: ' . $fila['fecha_estreno'] . '</p>';
-                        echo '<p>Duración: ' . $fila['duracion'] . '</p>';
-
-                        echo '<a href="pelicula_modificar.php?id='. $fila['id'] .'"><img src="../img/edit_pencil.png></a>';
-                        echo '<a href="pelicula_borrar.php?id=' . $fila['id'] . '"><img src="../img/trash_empty.png></a>';                    
-                        echo '</figure>';
                     }                                                       
                 }
                 else echo '<p>No se encontró ningún resultado</p>';            
             }
-            else echo '<p>Error en la consulta</p>';
-            desconectar($conexion);
+            else echo '<p>Error en la consulta</p>';            
         ?>
     </main>
 </section>

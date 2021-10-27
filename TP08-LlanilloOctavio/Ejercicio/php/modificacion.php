@@ -1,25 +1,13 @@
-<?php
-    $ruta = '../css';
-    require_once '../html/encabezado.html';
-?>
-
-
-<section>
-    <?php 
-        require_once 'menu.php';
-        require_once 'conexion.php';
-        
-        $conexion = conectar();
-    ?>
-    <main>        
-        <form action="insercion.php" method="post" enctype="multipart/form-data">
+<main>
+    <form action="pelicula_modificar_aceptar.php" method="post" enctype="multipart/form-data">
             <fieldset>
-                <h1>Nueva película</h2>
+                <h1>Editar película</h2>
+                <input type="hidden" name="id" value="<?php echo $fila['id'];?> ">
                 <label for="titulo">Título:
-                    <input id="titulo" name="titulo" value="" type="text" required>
+                    <input id="titulo" name="titulo" value="<?php echo $fila['titulo']; ?>" type="text" required>
                 </label>
                 <label for="duracion">Duración:
-                    <input id="duracion" name="duracion" value="" type="number" required>
+                    <input id="duracion" name="duracion" value="<?php echo $fila['duracion']; ?>" type="number" required>
                 </label>
                 <label for="genero">Genéro:
                     <select id="genero" name="genero">
@@ -35,12 +23,12 @@
                 <label for="foto">
                     <input id="foto" name="foto" type="file" accept="image/*">
                 </label>
-                <input id="cargar" name="cargar" type="submit">
+                <section class="botones">
+                    <input id="cargar" value="Modificar" type="submit">
+                    <a href="pelicula_listado.php">
+                    <input type="button" id="cancel" value="Cancelar">
+                    </a>
+                </section>
             </fieldset>
         </form>
     </main>
-</section>
-
-<?php 
-    require_once '../html/pie.html';
-?>
