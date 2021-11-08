@@ -1,6 +1,9 @@
+<?php 
+    session_start();
+    if (!empty($_SESSION['usuario'])){  
+?>
 <section>
-    <?php 
-        if (!empty($_SESSION['usuario'])){                    
+    <?php                           
             $ruta = '../css';
             require_once '../html/encabezado.html';
             require_once 'menu.php';

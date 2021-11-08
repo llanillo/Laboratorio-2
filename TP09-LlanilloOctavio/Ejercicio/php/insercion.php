@@ -1,4 +1,5 @@
 <?php 
+    session_start();
     if(!empty($_SESSION['usuario'])){
         require_once 'conexion.php';
 

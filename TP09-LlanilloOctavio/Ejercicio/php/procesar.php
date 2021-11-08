@@ -1,5 +1,6 @@
-<?php session_start(); ?>
-
+<?php
+    session_start();
+?>
 <main>
     <?php 
         require_once 'conexion.php';
@@ -7,19 +8,19 @@
             $usuario = $_POST['usuario'];
             $clave = sha1($_POST['clave']);
             $conexion = conectar();
-            $consulta = 'SELECT id FROM usuario WHERE usuario = \'' . $usuario . '\' AND password = \'' . $clave . '\'';
+            $consulta = 'SELECT * FROM usuario WHERE usuario = \'' . $usuario . '\' AND password = \'' . $clave . '\'';
             $resultado = mysqli_query($conexion, $consulta);
-
+            desconectar($conexion);
             if ($resultado){
-                if (mysqli_num_rows($resultado)) {
-                    $usuario = mysqli_fetch_array($resultado);
+                if (mysqli_num_rows($resultado) == 1) {
+                    $usuario = mysqli_fetch_array($resultado);                    
                     $_SESSION['usuario'] = $usuario['usuario'];
                     $_SESSION['foto'] = $usuario['foto'];
-                    header('refresh: 0; url=pelicula_listado.php');                
+                    header('refresh:0;url=pelicula_listado.php');                
                 }                
                 else{
                     echo '<h2>No se encontró ningún usuario</h2>';
-                    header('refresh: 5; url=../index.php')    ;                
+                    header('refresh:3;url=../index.php');                
                 }
             }
             else echo '<p>Error en la conexión</p>';            

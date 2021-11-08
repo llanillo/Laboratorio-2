@@ -1,4 +1,5 @@
 <?php
+    session_start();
     if(!empty($_SESSION['usuario'])){
         $ruta = '../css';
         require_once '../html/encabezado.html';

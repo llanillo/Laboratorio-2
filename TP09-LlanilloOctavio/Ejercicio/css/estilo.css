@@ -149,3 +149,17 @@ img{
 .logo{
     width: 9em;
 }
+
+#usuario{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 1em;
+    margin-left: 2em;
+    border-bottom: solid red 0.2em;    
+}
+
+#usuario a{
+    color: blue;
+    text-decoration: underline;
+}
