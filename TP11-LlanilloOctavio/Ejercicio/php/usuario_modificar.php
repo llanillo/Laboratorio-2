@@ -5,7 +5,6 @@
         require_once '../html/encabezado.html';
 ?>
 
-
 <section>
     <?php 
         require_once 'menu.php';
@@ -13,15 +12,15 @@
         
         $conexion = conectar();
         $id = $_GET['id'];
-        $consulta = 'SELECT * FROM pelicula WHERE id=\''. $id . '\'';
+        $consulta = 'SELECT * FROM usuario WHERE id=\''. $id . '\'';
         $resultado = mysqli_query($conexion, $consulta);
         desconectar($conexion);
 
         if ($resultado){                
             $fila = mysqli_fetch_array($resultado);   
-            require 'modificacion_pelicula.php';
+            require 'modificacion_usuario.php';
         }   
-        else echo '<p>Error al buscar la película</p>';    
+        else echo '<p>Error al buscar el usuario</p>';    
     ?>
 
 </section>

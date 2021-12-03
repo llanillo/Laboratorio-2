@@ -11,12 +11,25 @@
         require_once 'menu.php';
         require_once 'conexion.php';
         
-        $conexion = conectar();
-        $consulta = 'SELECT * FROM pelicula';
+        if(!empty($_GET['buscador'])){
+            $consulta = 'SELECT * FROM pelicula WHERE titulo LIKE \'%' . $_GET['buscador'] . '\'';
+        }
+        else{
+            $consulta = 'SELECT * FROM pelicula';
+        }
+
+        $conexion = conectar();        
         $resultado = mysqli_query($conexion, $consulta);        
         desconectar($conexion);
     ?>
     <main>
+        <setcion id="contenedor-buscador">
+            <form id="buscador" action="" method="get">
+                <input type="search" name="buscador" placeholder="Buscar...">
+                <input type="submit" value="Buscar">
+            </form>
+        </setcion>
+        
         <?php         
             if ($resultado){
                 echo '<h2>Listado de películas</h2>';

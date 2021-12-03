@@ -12,8 +12,7 @@
             $conexion = conectar();
 
             if (!empty($_FILES['foto']['size'])){
-                $tmp = $_FILES['foto']['name'];
-                $foto = explode('.', $tmp);
+                $tmp = $_FILES['foto']['name'];                
                 $carpeta = '../img/portadas/';
                 $nombre = $titulo. '.jpg';
         

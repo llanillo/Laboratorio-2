@@ -14,7 +14,7 @@
         $conexion = conectar();
     ?>
     <main>        
-        <form action="insercion.php" method="post" enctype="multipart/form-data">
+        <form action="pelicula_alta_ok.php" method="post" enctype="multipart/form-data">
             <fieldset>
                 <h1>Nueva película</h2>
                 <label for="titulo">Título:

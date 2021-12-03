@@ -15,7 +15,7 @@
     <ul>
         <?php
             if($_SESSION['tipo'] == 'Administrador'){
-                echo '<li>Nuevo usuario</li>';
+                echo '<li><a href="usuario_alta.php">Nuevo usuario</a></li>';
             }
         ?>        
         <li><a href="usuario_listado.php">Listado usuarios</a></li>
@@ -33,7 +33,8 @@
     </ul>
 
     <h2>Opciones</h2>
-    <ul>
+    <ul>    
+        <li><a href="configuracion.php">Configuración</a>
         <li><a href="contactenos.php">Contacto</a>
     </ul>
 </aside>

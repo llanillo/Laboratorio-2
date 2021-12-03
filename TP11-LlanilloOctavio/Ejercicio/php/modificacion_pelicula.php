@@ -1,7 +1,3 @@
-<?php 
-    session_start();
-    if (!empty($_SESSION['usuario'])){
-?>
 <main>
     <form action="pelicula_modificar_aceptar.php" method="post" enctype="multipart/form-data">
             <fieldset>
@@ -36,8 +32,3 @@
             </fieldset>
         </form>
     </main>
-
-<?php 
-    }
-    else header('refresh:0;url=../index.php');
-?>

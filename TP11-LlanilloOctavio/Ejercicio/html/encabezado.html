@@ -1,12 +1,17 @@
 <!DOCTYPE html>
 <html lang="es">
     <head>
-        <title>TP 09</title>
+        <title>TP 11</title>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">            
         <meta name="author" content="Octavio Patricio Llanillo Cabrera">
-        <meta name="description" content="Ejercicio 01" />        
-        <link rel="stylesheet" href="<?php echo $ruta; ?>/estilo.css">        
+        <?php 
+            if (!empty($_SESSION['usuario']) && isset($_COOKIE['estilo_' . $_SESSION['usuario']]) && $_COOKIE['estilo_' . $_SESSION['usuario']] == 'moderno')
+                echo '<link rel="stylesheet" href="../css/moderno.css">';
+            else
+                echo '<link rel="stylesheet" href="../css/estilo.css">';                        
+        ?>
+        <meta name="description" content="Ejercicio 01" />                
     </head>
     <body>

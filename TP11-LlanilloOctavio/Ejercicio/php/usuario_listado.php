@@ -19,13 +19,21 @@
                     <th>Usuario</th>
                     <th>Mail</th>
                     <th>Fecha alta</th>
-                    <th>Tipo</th>                
+                    <th>Tipo</th> 
+                    <?php 
+                        if ($_SESSION['tipo'] != 'Restringido')
+                            echo '<th>Modificar</th>';
+                    ?>                     
+                    <?php 
+                        if ($_SESSION['tipo'] == 'Administrador')
+                            echo '<th>Eliminar</th>';
+                    ?>                                                                    
                 </tr>
             </thead>
             <tbody>
             <?php 
                 if ($conexion){
-                    $consulta = 'SELECT usuario, mail, fecha_alta, tipo FROM usuario';
+                    $consulta = 'SELECT id, usuario, mail, fecha_alta, tipo FROM usuario';
                     $resultado = mysqli_query($conexion, $consulta);
             
                     if (mysqli_num_rows($resultado)){
@@ -35,6 +43,10 @@
                             echo '<td>' . $fila[1] . '</td>';
                             echo '<td>' . $fila[2] . '</td>';
                             echo '<td>' . $fila[3] . '</td>';
+                            if($_SESSION['tipo'] != 'Restringido')
+                                echo '<td><a href="usuario_modificar.php?id=' . $fila['id'] . '"><img src="../img/iconos/edit_pencil.png"></a></td>';
+                            if ($_SESSION['tipo'] == 'Administrador')
+                                echo '<td><a href="usuario_borrar.php?id=' . $fila['id'] . '"><img src="../img/iconos/trash_empty.png"></a></td>';
                             echo '</tr>';
                         }
                     }
